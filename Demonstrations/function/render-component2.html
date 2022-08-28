@@ -15,7 +15,8 @@
                      
     <script type="text/babel">
         function Hello() {
-          return <h1>Hello World!</h1>;
+          let greet = 'Hello World!';
+          return <h1>{greet}</h1>;
         }
   
         ReactDOM.render(<Hello />, document.getElementById('root'))
