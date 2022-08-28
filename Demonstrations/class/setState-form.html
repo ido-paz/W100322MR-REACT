@@ -14,7 +14,14 @@
 
     <script type="text/babel">
       class MyForm extends React.Component {
-        state = { name: "", myCar: "" };
+        name = '';
+        state = { name: "", myCar:"" };
+
+        // constructor(){
+        //   super();
+        //   this.state = { name: "", myCar: "" };
+        //   this.name ='';
+        // }
         //
         handleSubmit = (e) => {
           e.preventDefault();
