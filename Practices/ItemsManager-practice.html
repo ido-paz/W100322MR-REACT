@@ -9,30 +9,13 @@
   <body>
    
     <script>
-      /*
+       /*
       Create an ItemManager application that allows to add item to a list , display and filter items in the list
-      * Event handlers , dom manipulation , choose one of the 5:
-      1. Attach to addBTN onClick event a function to add the text value of addTXT as a list item (li) in listUL
-      2. Attach to addBTN click event to using addEventListener method to add the text value of addTXT as a list item (li) in listUL innerHTML
-      3. Attach to addBTN click event to using addEventListener method to add the text value of addTXT as a list item (li) in listUL appendChild method
-      4. Add li to ul using innerHTML , add function to li onClick event that alerts the li text value.
-      5. Add li to ul using createElement , appendChild, add anonymous function to li onClick event that alerts the li text value.
-      * Input validation:
-      6. Display alert message when the text is empty or shorter than 2 characters ,and don't add it to the 'items'
-      * Data management:
-      7. Create a variable named 'items' that contains an array of strings  and a 'renderItems' function that uses the items variable to update the listUL with new li.
-        a. Call renderItems to update the display in the initial page load  
-        b. In each list item addition add item to the 'items' variable , call renderItems
-      8. Manage the 'items' variable in localStorage to enable storing the data even when the computer is closed.
-      9. When changing the input text , display only the matching items
-      * Input validation:
-      10. Display alert message when the text is allready been entered before and don't add it to the 'items'
-      * Object oriented
-      11. Create ItemsManager class to manages 'items' variable and enables access to it threw methods
-        a. add - add new item , if text doesn't pass all input validations checks ,throw Error 
-        b. getAll - return all items
-        c. getByText - return filtered items using text
-      12. ItemsManager should use localStorage to add and get items
+      * UI User interface:
+      1. Create a root element in the html body to contains all the rendered componets
+      2. Craete ItemManager component
+      3. Create AddItem component
+      4. Create DisplayItems Component      
       */
     </script>
   </body>
