@@ -4,26 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOM create append</title>
+    <title>ItemManager</title>
   </head>
   <body>
-    <script>
-      /*
+    <!--
       Create an Item manager application that allows to add item to a list ,
        display and filter items in the list
+      * Code dependencies:
+      0. Add React,React DOM , Babel scripts references
       * UI - User interface:
       1. Create a h1 header with Item manager text
       2. Create a root element in the html body to contains all the rendered componets
-      3. Create ItemManager component
+      3. Create ItemsManagerUI component
       4. Create AddItem component that contains text input and a button
       5. Create DisplayItems Component that displayes 1 li in a ul element
       6. Add a local variable in DisplayItems with value ['a','b','c'] and render them as li's
-      7. Move the local variable items from DisplayItems to ItemsManager as pass the items to DisplayItems
+      7. Move the local variable items from DisplayItems to ItemsManagerUI as pass the items to DisplayItems
       * Data management
-      8. Add getItems function that return an array , use the function to initialize items variable in ItemsManager
+      8. Add getItems function that return an array , use the function to initialize items variable in ItemsManagerUI
       * UI - User interface:
-      9. Display alert with the text of an li when clicking on it 
-      */
-    </script>
+      9. Display alert with the text of an li when clicking on it
+      * Data management
+      10. getItems should use a global scope variable names 'items';
+      11. Add addItem function that adds an item to the 'items' variable
+      12. Add getItemsByText function that return all 'items' that equale to the text
+      * UI - Event handling
+      13. When clicking add item button
+        a. add the text from the text input to 'items' variable using addItem function
+        b. Rerender DisplayItems using getItems function
+      14. When changing the input text Rerender DisplayItems using getItemsByText function
+      * Data management
+      15. Create/Use ItemsManagerStorage for adding new item, getting all items , getting items by text
+      * UI - input validations
+      16. Display alert message when text input validation errors accures. 
+    -->
   </body>
 </html>
