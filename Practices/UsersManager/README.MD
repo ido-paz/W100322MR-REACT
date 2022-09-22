@@ -13,8 +13,11 @@ UI for managing users , enabling searching ,creating updating deleting users in 
 7. Navigation component would display as a top navigation bar with Home , Users links  , it displays the active link (using NavLink) , when clicking on a link it will render Home or Users components.
 8. Pop up dialogs:
 a. Display alert message on succesful user add.
+<br/>
 b. Display alert message on succesful user update.
+<br/>
 c. Display alert message if invalid email  
+<br/>
 d. Display alert message if invalid password 
 
 * Data management:
