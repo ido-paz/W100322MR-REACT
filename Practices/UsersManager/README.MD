@@ -2,7 +2,7 @@
 
 UI for managing users , enabling searching ,creating updating deleting users in the system
 
-- Components
+- UI , Components
 
 1. Home component should display a greating , explantion about the system , should be available to all users including guests.
 2. Users component should render SearchUsers ,UsersList components .
@@ -11,8 +11,16 @@ UI for managing users , enabling searching ,creating updating deleting users in 
 5. AddUser component should display Add user as header, email , password text inputs , a button that will add the user to the users list , on successfull addition display alert with success message and returns the display to Users component, otherwise display alert error message.
 6. UpdateUser component should display Update user as header, email , password text inputs , a button that will update the user in the users list , on successfull update display alert with success message and returns the display to Users component, otherwise display alert error message
 7. Navigation component would display as a top navigation bar with Home , Users links  , it displays the active link (using NavLink) , when clicking on a link it will render Home or Users components.
+8. Pop up dialogs:
+a. Display alert message on succesful user add.
+b. Display alert message on succesful user update.
+c. Display alert message if invalid email  
+d. Display alert message if invalid password 
+
+* Data management:
+1. Create a class that manages all users data threw get,add,update,delete methods.
 
 - Input validation:
+1. Validate email before adding or updating user , in data the manager, throw Error when invalid
+2. Validate password before adding or updating user (at least 4 characters) , in data the manager, throw Error when invalid.
 
-1. validate email when adding or updating user,display alert message if invalid
-2. validate password when adding or updating user,display alert message if invalid (at least 4 characters)
