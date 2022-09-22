@@ -12,14 +12,15 @@ UI for managing users , enabling searching ,creating updating deleting users in 
 6. UpdateUser component should display Update user as header, email , password text inputs , a button that will update the user in the users list , on successfull update display alert with success message and returns the display to Users component, otherwise display alert error message
 7. Navigation component would display as a top navigation bar with Home , Users links  , it displays the active link (using NavLink) , when clicking on a link it will render Home or Users components.
 8. Pop up dialogs:
+<br/>
 a. Display alert message on succesful user add.
 <br/>
 b. Display alert message on succesful user update.
 <br/>
-c. Display alert message if invalid email  
+c. Display alert message if invalid email.
 <br/>
-d. Display alert message if invalid password 
-
+d. Display alert message if invalid password .
+<br/>
 * Data management:
 1. Create a class that manages all users data threw get,add,update,delete methods.
 
