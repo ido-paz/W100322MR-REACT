@@ -1,9 +1,10 @@
 const express = require("express");
 const { StatusCode } = require("status-code-enum");
-const cors = require('cors');
+const cors = require("cors");
 const storage = require("./UsersManager_Storage");
+const config = require('./config.json');
 const app = express();
-const port = 5000;
+const port = config.httpPort;
 //
 app.use(cors());
 app.use(express.json());
@@ -31,6 +32,18 @@ app.post("/", (req, res) => {
     if (storage.addUser(req.body) != null)
       res.status(StatusCode.SuccessCreated).json(req.body);
     else throw Error("Error adding user :" + JSON.stringify(req.body));
+  } catch (error) {
+    console.error(error.message);
+    res.status(StatusCode.ServerErrorInternal).json({ message: error.message });
+  }
+});
+//
+app.post("/authenticate", (req, res) => {
+  try {
+    let { email, password } = req.body;
+    if (storage.authenticate(email, password))
+      res.setHeader("Authorization", "bearer 1234abcd").send();
+    else res.status(StatusCode.ClientErrorUnauthorized).send();
   } catch (error) {
     console.error(error.message);
     res.status(StatusCode.ServerErrorInternal).json({ message: error.message });

@@ -1,3 +1,5 @@
+const config = require('./config.json');
+//
 let users = [
   { id: 1, email: "u1@user.com", password: "1111" },
   { id: 2, email: "u2@user.com", password: "2222" },
@@ -41,6 +43,10 @@ exports.addUser = function (newUser) {
       return newUser;
     }
   } else throw Error("invalid user data");
+};
+//
+exports.authenticate = function (email, password) {
+  return email == config.administrator && password == config.password;
 };
 //
 function getNewUserID() {
