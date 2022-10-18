@@ -24,7 +24,7 @@ UI for managing users , enabling searching ,creating updating deleting users in 
 
 - Data management:
 
-1. Create a class that manages all users data threw get,add,update,delete methods.
+11. Create a class that manages all users data threw get,add,update,delete methods.
 
 - Input validation:
 
