@@ -14,14 +14,7 @@
 
     <script type="text/babel">
       class MyForm extends React.Component {
-        name = '';
-        state = { name: "", myCar:"" };
-
-        // constructor(){
-        //   super();
-        //   this.state = { name: "", myCar: "" };
-        //   this.name ='';
-        // }
+        state = { name: "", myCar: "" };
         //
         handleSubmit = (e) => {
           e.preventDefault();
@@ -29,28 +22,34 @@
         };
         //
         render() {
+          console.log("render", this.state.name, this.state.myCar);
           return (
-            <form onSubmit={this.handleSubmit}>
-              <label>
-                Enter your name:
-                <input
-                  type="text"
-                  value={this.state.name}
-                  onChange={(e) => this.setState({ name: e.target.value })}
-                />
-              </label>
-              <select
-                id="carType"
-                name="carType"
-                value={this.state.myCar}
-                onChange={(e) => this.setState({ myCar: e.target.value })}
-              >
-                <option value="Ford">Ford</option>
-                <option value="Volvo">Volvo</option>
-                <option value="Fiat">Fiat</option>
-              </select>
-              <input type="submit" value="send" />
-            </form>
+            <>
+              <form onSubmit={this.handleSubmit}>
+                <label>
+                  Enter your name:
+                  <input
+                    type="text"
+                    value={this.state.name}
+                    onChange={(e) => this.setState({ name: e.target.value })}
+                  />
+                </label>
+                <select
+                  id="carType"
+                  name="carType"
+                  value={this.state.myCar}
+                  onChange={(e) => this.setState({ myCar: e.target.value })}
+                >
+                  <option value="Ford">Ford</option>
+                  <option value="Volvo">Volvo</option>
+                  <option value="Fiat">Fiat</option>
+                </select>
+                <input type="submit" value="send" />
+              </form>
+              <footer>
+                Current name: {this.state.name} ,has car: {this.state.myCar}
+              </footer>
+            </>
           );
         }
       }

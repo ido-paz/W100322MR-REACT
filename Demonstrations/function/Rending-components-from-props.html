@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rending-components-from-props</title>
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
@@ -15,26 +15,55 @@
     <div id="root"></div>
     <script type="text/babel">
       //
-      function Title(props){
-        return <h1>{props.text}</h1>;
+      // class Title extends React.Component {
+      //   render() {
+      //     return <h1>{this.props.text}</h1>;
+      //   }
+      // }
+      // //
+      // class Body extends React.Component {
+      //   render() {
+      //     return <main>{this.props.content}</main>;
+      //   }
+      // }
+      // //
+      // class Page extends React.Component {
+      //   render() {
+      //     return (
+      //       <>
+      //         {this.props.title}
+      //         {this.props.body}
+      //       </>
+      //     );
+      //   }
+      // }
+      //
+      function Title(props) {
+        return (
+          <div>
+            <h1>{props.t}</h1>
+            <h2>{props.z}</h2>
+          </div>
+        );
       }
       //
-      function Body(props){
-        return <main>{props.content}</main>;
+      function Body(props) {
+        return <main>{props.c}</main>;
       }
       //
-      function Page(props){
-        return <>
-              {props.title}
-              {props.body}
-              </>
+      function Page(props) {
+        return (
+          <>
+            {props.a}
+            {props.b}
+          </>
+        );
       }
       //
-      ReactDOM.render(<Page title={<Title text="Hello!"/>}
-                            body={<Body content="some text"/>}/>,
-                            document.getElementById('root'));
-
+      ReactDOM.render(
+        <Page a={<Title t={"Hello!"} z={1} />} b={<Body c="some text" />} />,
+        document.getElementById("root")
+      );
     </script>
-  
   </body>
 </html>

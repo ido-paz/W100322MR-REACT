@@ -48,9 +48,9 @@ class Person {
 // p1.greet();
 // p2.printDetails();
 // p3.printDetails();
-// console.log(a1.getVal());
-// console.log(b1.getZal());
 // let b1= new B()
 // let b2= new B(33,44);
 // console.log(b1);
 // console.log(b2);
+// console.log(a1.getVal());
+// console.log(b1.getZal());

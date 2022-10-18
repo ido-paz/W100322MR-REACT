@@ -33,14 +33,14 @@
       let Clicker = () => {
         let text = "stam text";//local variable that created in each render
         let [count0, setCount0] = React.useState(0); 
-        let [count1, setCount1] = React.useState(getValue1(11)); //getValue1 executes on every render
-        let [count2, setCount2] = React.useState(() => {getValue2(22)}); //getValue2 executes only once
+        let [count1, setCount1] = React.useState(getValue1(0)); //getValue1 executes on every render
+        let [count2, setCount2] = React.useState(() => getValue2(0)); //getValue2 executes only once
         //
         function appendAndlogText() {
           text += "*";
           console.log(text);
         }
-        console.log("render", text,count0, count1, count2);
+        console.log("render", text, count1, count2);
         //
         return (
           <>
@@ -72,7 +72,7 @@
               add count2
             </button>
             <div>
-              text={text}, count0={count0} , count1={count1} , count2={count2}
+              text={text}, count0={count0} , count1={count1} , count2={count2}{" "}
             </div>
           </>
         );

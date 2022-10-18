@@ -25,8 +25,9 @@
         };
 
         return (
+          <>
           <form onSubmit={handleSubmit} 
-                action="https://google.co.il">
+                action="https://booble.co.il">
             <label>
               Enter your name:
               <input
@@ -46,7 +47,10 @@
               <option value="Fiat">Fiat</option>
             </select>
             <input type="submit" value="send" />
+            
           </form>
+          <footer>Current name: {name} ,has car: {myCar}</footer>
+          </>
         );
       }
 
