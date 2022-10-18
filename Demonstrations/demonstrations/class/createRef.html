@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      class Greet extends React.Component {
+        constructor(props) {
+          super(props);
+          this.TextInput = React.createRef();
+          this.Counter = React.createRef(0);
+        }
+        //
+        render() {
+          console.log(++this.Counter.current);
+          return (
+            <div>
+              <input
+                type="text"
+                ref={this.TextInput}
+                defaultValue={this.props.text}
+              />
+              <button
+                onClick={() => {
+                  alert(this.TextInput.current.value);
+                }}
+              >
+                alert text
+              </button>
+            </div>
+          );
+        }
+      }
+      //
+      ReactDOM.render(<Greet text="Hello" />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
