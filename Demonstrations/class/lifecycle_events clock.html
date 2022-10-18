@@ -44,7 +44,7 @@
       //
       class Clock extends React.Component {
         constructor(props) {
-          super(props);
+          super();
           console.log("constructor");
           this.state = { timerID: null, date: new Date() };
         }
@@ -88,7 +88,7 @@
                 {this.state.timerID ? "Stop" : "Start"} timer
               </button>
             </div>
-          );
+          )
         }
       }
 

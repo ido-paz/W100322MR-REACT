@@ -24,7 +24,7 @@
         };
         //
         if (show) {
-          myheader = <Child />;
+          myheader = <Contained />;
         }
         return (
           <div>
@@ -36,10 +36,14 @@
         );
       }
 
-      function Child() {
+      function Contained() {
+        React.useEffect(() => {
+          console.log("Contained (re)render");
+        });
+        //
         React.useEffect(() => {
           return () =>
-            alert("The component named Header is about to be unmounted.");
+            console.log("Contained is about to be unmounted");
         });
         return <h1>Hello World!</h1>;
       }

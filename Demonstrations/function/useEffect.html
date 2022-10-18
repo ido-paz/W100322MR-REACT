@@ -21,7 +21,8 @@
       //2. Empty array = runs only once,in first render
       //3. Array of the depended state variables = run only on depended state variables change
       let Clicker = ()=>{
-        const [count,setCount] = React.useState(0);
+        const [count1,setCount1] = React.useState(1);
+        const [count2,setCount2] = React.useState(2);
         //
         console.log('render');
         //
@@ -34,12 +35,17 @@
         },[])
         //
         React.useEffect(()=>{
-          console.log('useEffect only on count change');
-        },[count])
+          console.log('useEffect only on count 1 change');
+        },[count1])
+         //
+         React.useEffect(()=>{
+          console.log('useEffect only on count 2 change');
+        },[count2])
         //
         return <>
                <button onClick={()=>console.log(Date.now())}>log date</button>
-               <button onClick={()=>{setCount(count+1);console.log(count)}}>add count</button>
+               <button onClick={()=>{setCount1(count1+1);console.log(count1)}}>add count 1</button>
+               <button onClick={()=>{setCount2(count2+1);console.log(count2)}}>add count 2</button>
                </>
       }
       ReactDOM.render(<Clicker/>,document.getElementById('root'));
