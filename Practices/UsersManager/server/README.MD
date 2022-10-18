@@ -1,5 +1,5 @@
 # Users manager web API enables managing users
-The API should contains:
+* The API should contains:
 1. Getting all users using 'get' request to http[s]://[serverUrl] 
 2. Getting user by id using 'get' request to http[s]://[serverUrl]/[id]
 3. Getting users by email using 'get' request to http[s]://[serverUrl]/contains/[email]
