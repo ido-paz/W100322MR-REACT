@@ -8,7 +8,7 @@
   "version": "1.0.0",
   "main": "UsersManager_Storage.js",
   "scripts": {
-    "test": "node ./UsersManager_Storage.js "
+    "dev": "node ./UsersManager_WebAPI.js"
   },
   "author": "",
   "license": "ISC",
