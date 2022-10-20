@@ -42,7 +42,7 @@ app.post("/authenticate", (req, res) => {
   try {
     let { email, password } = req.body;
     if (storage.authenticate(email, password))
-      res.setHeader("Authorization", "bearer 1234abcd").send();
+      res.set("Authorization", "bearer 1234abcd").send();
     else res.status(StatusCode.ClientErrorUnauthorized).send();
   } catch (error) {
     console.error(error.message);
